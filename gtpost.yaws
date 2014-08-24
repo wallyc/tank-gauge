@@ -1,0 +1,19 @@
+<erl>
+
+out(A) ->
+    case gauge:top(A) of
+        ok ->
+        case yaws_api:parse_post(A) of 
+			[] ->
+				yaws_api:redirect("gauge.yaws");
+			_ ->
+				gauge:show_gauge_result(A)
+				%%{html, f("~p", [yaws_api:parse_post(L)])}
+		end;
+        X ->
+            X
+    end.
+
+</erl>
+
+

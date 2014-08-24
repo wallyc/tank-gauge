@@ -1,0 +1,11 @@
+<erl>
+
+out(A) ->
+    case gauge:top(A) of
+        ok ->
+            gauge:gauge(A);
+        X ->
+            X
+    end.
+
+</erl>

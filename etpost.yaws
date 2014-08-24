@@ -1,0 +1,17 @@
+<erl>
+out(A) ->
+	case yaws_api:parse_post(A) of 
+		[] ->
+			yaws_api:redirect("gauge.yaws");
+		_ ->
+
+			T = gauge:to_integer(gauge:get_arg(A, "tank")),
+			G = gauge:to_float(gauge:get_arg(A, "grav")),
+			U = gauge:get_arg(A, "product"),
+			{X, Y} = db:update_record(T,G,U),
+			[gauge:header(), gauge:toolbar(), gauge:alert(X, Y), gauge:footer()]
+			%%{html, f("~p", [L])}
+	end.
+</erl>
+
+

@@ -1,0 +1,8 @@
+<erl>
+out(A) ->
+	gauge:login(A).
+	%%L=yaws_api:parse_post(A),
+	%%{html, f("~p", [A])}.
+</erl>
+
+
