@@ -2,7 +2,7 @@
 
 tank-gauge facilitates the calculation of petroleum storage tank volumes on mobile devices. 
 
-The current UI built on top of functionality specific to the [YAWS](http://yaws.hyber.org) web server. Measurement data is persisted in Mnesia. It does not implement OTP behaviours, does not function properly in Internet Explorer and no effort has been made yet to implement a responsive layout for the desktop. 
+The current UI is built on top of functionality specific to the [YAWS](http://yaws.hyber.org) web server. Measurement data is persisted in Mnesia. It does not implement OTP behaviours, does not function properly in Internet Explorer and no effort has been made yet to implement a responsive layout for the desktop. 
 
 ## It supports the following:
 
